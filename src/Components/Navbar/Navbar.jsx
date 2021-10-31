@@ -1,5 +1,6 @@
 import jss from "jss";
 import preset from "jss-preset-default";
+import MenuButton from "./MenuButton";
 
 jss.setup(preset());
 
@@ -18,13 +19,13 @@ const style = {
 const { classes } = jss.createStyleSheet(style).attach();
 
 const Navbar = () => {
+  const numbers = [1, 2, 3, 4, 5];
+  const listItems = numbers.map((number) => (
+    <MenuButton key={number}>{number}</MenuButton>
+  ));
   return (
     <nav className={classes.nav}>
-      <ul className={classes.ul}>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-      </ul>
+      <ul className={classes.ul}>{listItems}</ul>
     </nav>
   );
 };
