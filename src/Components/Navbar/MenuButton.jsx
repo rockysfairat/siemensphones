@@ -19,12 +19,8 @@ const style = {
 
 const { classes } = jss.createStyleSheet(style).attach();
 
-const MenuButton = () => {
-  return (
-    <button className={classes.menuButton}>
-      {/* <span>Button Item</span> */}
-    </button>
-  );
+const MenuButton = ({ innerText }) => {
+  return <button className={classes.menuButton}>{innerText}</button>;
 };
 
 export default MenuButton;
