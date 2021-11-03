@@ -12,15 +12,19 @@ const style = {
     color: "red",
     border: 0,
     "& span": {
-      "background-color": "red",
+      color: "black",
     },
   },
 };
 
 const { classes } = jss.createStyleSheet(style).attach();
 
-const MenuButton = ({ innerText }) => {
-  return <button className={classes.menuButton}>{innerText}</button>;
+const MenuButton = ({ year }) => {
+  return (
+    <button className={classes.menuButton}>
+      <span>{year}</span>
+    </button>
+  );
 };
 
 export default MenuButton;

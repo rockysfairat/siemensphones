@@ -6,7 +6,7 @@ import global from "jss-plugin-global";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
-import MenuButton from "./Components/Navbar/MenuButton";
+import Main from "./Pages/Main/Main";
 
 /* Global styles: */
 jss.setup(jssPresetDefault());
@@ -37,8 +37,7 @@ function App() {
     <div className={classes.container}>
       <Header />
       <Navbar />
-      <MenuButton />
-      <h1>Test</h1>
+      <Main />
       <Footer />
     </div>
   );
